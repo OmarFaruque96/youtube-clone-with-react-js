@@ -1,0 +1,101 @@
+.hamburger_icon{
+    background-color: transparent;
+    border: none;
+    margin-right: 12px;
+    position: relative;
+    z-index: 999;
+}
+.hamburger_icon::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    background: transparent;
+    height: 40px;
+    left: -10px;
+    top: -6px;
+    border-radius: 100%;
+}
+.hamburger_icon:hover::before{
+    background-color:#e3e3e3;
+}
+.hamburger_icon:hover{
+    color: black;
+    cursor: pointer;
+}
+.hamburger_icon span{
+    height: 1px;
+    width: 20px;
+    display: block;
+    background: #030303;
+    margin: 6px 0;
+    z-index: 9999;
+    position: relative;
+}
+.logo{
+    align-items: center;
+}
+.search form{
+    position: relative;
+    display: inline-block;
+}
+.search input{
+    padding: 12px 24px;
+    width: 600px;
+    border-radius: 35px;
+    border: none;
+    border:1px solid #bbbbbb;
+    font-size: 16px;
+    font-weight: 500;
+}
+.search input:focus{outline: none;}
+.search button{
+    position: absolute;
+    right: 1px;
+    border-radius: 0 35px 35px 0;
+    border: none;
+    top: 1px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f8f8f8;
+}
+header{
+    width: 100%;
+    padding: 8px 30px;
+}
+.voice-command-btn i{
+    height: 40px;
+    width: 40px;
+    background: #f8f8f8;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+    color: black;
+    margin-left: 10px;
+}
+.voice-command-btn i:hover{
+    cursor: pointer;
+    background-color:#e3e3e3;
+}
+.nav-right span{
+    margin-left: 0px;
+}
+.nav-right span i{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 100%;
+    color: black;
+    margin: auto;
+}
+.nav-right span i:hover{
+    cursor: pointer;
+    background-color:#e3e3e3;
+}
+.nav-right img{margin-left: 24px;}
+.loggedin_user:hover{
+    cursor: pointer;
+}

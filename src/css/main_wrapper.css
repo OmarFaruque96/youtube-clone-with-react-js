@@ -1,0 +1,86 @@
+.main_wrapper{
+    width: calc(100% - 280px);
+    margin-left: auto;
+    padding: 16px 32px;
+}
+.menu_tags{
+    display: block;
+}
+.menu_tags li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 12px;
+}
+.menu_tags li a{
+    padding: 8px 14px;
+    background: #f8f8f8;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #2e2e2e;
+    display: inline-block;
+}
+.tag_active{
+    background: #080808 !important;
+    color: #ffffff !important;
+}
+.videos_grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 32px 0;
+    column-gap: 20px;
+    grid-row-gap: 20px;
+}
+.videos_grid .grid-item .youtube_thumbnail{
+    height: 210px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+.videos_grid .grid-item:hover{
+    cursor: pointer;
+}
+.videos_grid .video-content{
+    margin-top: 16px;
+    display: flex;
+}
+.videos_grid .account-img{
+    margin-right: 12px;
+}
+.videos_grid .account-img img{
+    border-radius: 100%;
+    width: 66px;
+}   
+
+.videos_grid .title a{
+    font-size: 15px;
+    color: #0f0f0f;
+    text-decoration: none;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.running_time{
+    background: rgb(0 0 0 / 45%);
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    z-index: 9999;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.videos_grid .channel-name,.videos_grid .total-views,.videos_grid .upload-time{
+    font-size: 13px;
+    color: #606060;
+}
+.videos_grid .total-views{
+    margin-right: 2px;
+}
+.videos_grid .upload-time{
+    margin-left: 2px;
+}
