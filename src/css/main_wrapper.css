@@ -26,7 +26,7 @@
 }
 .videos_grid{
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     margin: 32px 0;
     column-gap: 20px;
     grid-row-gap: 20px;
@@ -38,9 +38,10 @@
     overflow: hidden;
     position: relative;
 }
-.videos_grid .grid-item:hover{
-    cursor: pointer;
-}
+/* .videos_grid .grid-item .youtube_thumbnail img{
+    width: 100% !important;
+} */
+
 .videos_grid .video-content{
     margin-top: 16px;
     display: flex;
@@ -83,4 +84,76 @@
 }
 .videos_grid .upload-time{
     margin-left: 2px;
+}
+.keep_hovering_text{
+    background: rgb(0 0 0 / 45%);
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    z-index: 9999;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 2px 6px;
+    display: none;
+    border-radius: 4px;
+}
+.youtube_thumbnail:hover .keep_hovering_text{
+    display: block;
+}
+.youtube_thumbnail:hover .running_time{
+    display: none;
+}
+.video_card_hover_btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    display: none;
+}
+.video_card_hover_btn svg{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+.video_card_hover_btn button{
+    padding: 8px 16px;
+    border-radius: 35px;
+    border: none;
+    width: 48%;
+}
+.videos_grid .grid-item{
+    transition: 0.3s;
+}
+.videos_grid .grid-item:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 3px 6px 0 rgb(0 0 0 / 20%);
+    border-radius: 10px;
+    transform: scale(1.1);
+    overflow: hidden;
+    z-index: 9999;
+    position: relative;
+    transition: 0.3s;
+}
+.videos_grid .grid-item:hover .video-content{
+    padding: 0 16px;
+    transition: 0.3s;
+}
+.videos_grid .grid-item:hover .video_card_hover_btn{
+    display: block;
+}
+.main_video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.main_video iframe{
+    height: 100%;
+    width: 100%;
+}
+.videos_grid .grid-item:hover .main_video{
+    display: block;
 }
